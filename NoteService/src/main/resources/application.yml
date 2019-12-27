@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+    #  username: chandan
+     # password: root
+      database: Springdb
+      port: 27017
+      host: localhost
+  application:
+    name: note-service
+server:
+  port: 8082
