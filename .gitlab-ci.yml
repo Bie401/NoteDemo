@@ -5,6 +5,18 @@ maven-build:
 maven-test:
   script: "mvn test"
   stage: test
+services:
+  - mysql:5.5
 stages:
   - test
   - build
+variables:
+      # Configure mysql service (https://hub.docker.com/_/mysql/)
+  MYSQL_DATABASE: test
+  MYSQL_ROOT_PASSWORD: root
+
+connect:
+  image: mysql
+script:
+  - echo "SELECT 'OK';" | mysql --user=root --password="$MYSQL_ROOT_PASSWORD" --host=mysql "$MYSQL_DATABASE
+    
