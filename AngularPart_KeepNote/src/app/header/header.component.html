@@ -18,28 +18,28 @@
 			</div>
 		</div> -->
 		<button mat-button [matMenuTriggerFor]="menu"><mat-icon class="maticon">menu</mat-icon>Menu</button>
-<mat-menu #menu="matMenu">
+		<mat-menu #menu="matMenu">
 
-     
-      <button class="note" mat-menu-item (click)="routeToNoteView()">
-            <mat-icon class="maticon">note</mat-icon>
-            Notes &nbsp;
-      </button>
-      <mat-divider></mat-divider>
-      <button class="note" mat-menu-item (click)="routeToReminder()">
-            <mat-icon class="maticon">alarm</mat-icon>
-            Reminder &nbsp;
-      </button>
-      <mat-divider></mat-divider>
-      <button class="category" mat-menu-item (click)="routeToCategory()">
-            <mat-icon class="maticon">notes</mat-icon>
-            Category 
-       </button>
+		
+			<button class="note" mat-menu-item (click)="routeToNoteView()">
+					<mat-icon class="maticon">note</mat-icon>
+					Notes &nbsp;
+			</button>
+			<mat-divider></mat-divider>
+			<button class="note" mat-menu-item (click)="routeToReminder()">
+					<mat-icon class="maticon">alarm</mat-icon>
+					Reminder &nbsp;
+			</button>
+			<mat-divider></mat-divider>
+			<button class="category" mat-menu-item (click)="routeToCategory()">
+					<mat-icon class="maticon">notes</mat-icon>
+					Category 
+			</button>
       
       <!-- <app-category matInput [category]="category" *ngFor="let category of categories"></app-category> -->
 
       
-</mat-menu>
+		</mat-menu>
 		<div class="btn-group">
 				<button type="button"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					{{userId}}
